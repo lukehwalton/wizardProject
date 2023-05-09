@@ -1,0 +1,13 @@
+.top-bar{
+  height: max-content;
+  background: radial-gradient(
+    ellipse closest-corner,
+    blue 50%,
+    lightblue);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.input-section{
+  background: grey;
+}
