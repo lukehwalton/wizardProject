@@ -1,5 +1,5 @@
 .top-bar{
-  height: max-content;
+  height: 40px;
   background: radial-gradient(
     ellipse closest-corner,
     blue 50%,
@@ -10,4 +10,9 @@
 
 .input-section{
   background: grey;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
