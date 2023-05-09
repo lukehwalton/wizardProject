@@ -38,6 +38,7 @@ class User {
     get currentPhase(){
         return this.currentPhase;
     }
+    
     updatePhase1(name, email, birthDate) {
       this.name = name.trim();
       this.email = email.trim();
