@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Entry Wizard - Phase 4</title>
+    <title>Phase 4</title>
     <link rel="stylesheet" href="page4Styles.css">
 </head>
 <body>
-    <h1>User Entry Wizard - My Profile Table</h1>
-    <table id="registrationTable">
-        <thead>
-            <tr>
-                <th>User #</th>
-                <th>Image</th>
-                <th>Name and Surname</th> <!-- pulling both Name and Surname together -->
-                <th>Email</th>
-                <th>Birth Date</th>
-                <th>City</th>
-                <th>Street</th> <!-- pulling both Street and Street Number together -->
-                <th>Hobbies</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- we than shall insert user data here -->
-        </tbody>
-    </table>
+    <div class="top-bar">
+        <h1>User Entry Wizard - My Profile</h1>
+    </div>
+    <div class="profile-container">
+        <img id="image-box" class="profile-image" src="" alt="Profile Image">
+        <h1 id="name" class="profile-name"></h1>
+        <ul class="profile-info">
+            <li id="email"></li>
+            <li id="birth-date"></li>
+            <li id="city-box"></li>
+            <li id="street-box"></li>
+            <li id="number-box"></li>
+        </ul>
+        <h2>Hobbies</h2>
+        <ul id="hobbies-box" class="profile-hobbies"></ul>
+    </div>
+    <div class = "navigation-buttons">
+        <button onclick="navigateBack(2)">< Back</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
