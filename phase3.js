@@ -1,28 +1,39 @@
+function goBack(){
+  window.location.href = "phase2.html"
+}
+
 function submitPhase3() {
     const imageInput = document.getElementById("image-box");
-    const hobbiesInput = document.getElementById("checkbox")
-  
-    const image = imageInput.value.trim();
-    const hobbies = hobbiesInput.value.trim();
+    const hobbyBoxes = document.getElementsByName('hobbies');
+    const imageURL = imageInput.value.trim();
+    const hobbies = [];
     let isValid = true;
   
     // Validate image url
-    if (!validateImageURL(url, callback)) {
-      isValid = false;
-      firstInput.classList.add("invalid");
-    } else {
-      firstInput.classList.remove("invalid");
+    validateImageURL(imageURL, function(imgValid){
+      if (!imgValid){
+        isValid = false;
+        imageInput.classList.add("invalid");
+      } else {
+        imageInput.classList.remove('invalid')
+      }
+    });
+
+    //get a list of hobbies from the checkbox
+    for (var i= 0; i < hobbyBoxes.length; i++){
+      if (hobbyBoxes[i].checked) hobbies.push(hobbyBoxes[i].value);
     }
   
     console.log(`isValid is ${isValid}`)
     if (isValid) {
-      const user = new User();
-      user.updatePhase3(image);
+      const oldUser = localStorage.getItem("user");
+      const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.number);
+      user.updatePhase3(image, hobbies.join(","));
   
       localStorage.setItem("user", JSON.stringify(user));
   
-      //Redirect to phase 2 page
-      window.location.href = "phase3Page.html";
+      //Move on to summary page
+      window.location.href = "phase4Page.html";
     }
   }
   
