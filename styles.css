@@ -9,10 +9,20 @@
 }
 
 .input-section{
-  background: grey;
+  background: linear-gradient(gray, lightgray);
   padding-top: 20px;
   padding-bottom: 10px;
   display: flex;
+  flex-direction: column;
+  align-content:center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.input-label{
+  margin-right: 10px;
+}
+
+.text-box{
+  width: 20ch;
 }
