@@ -5,9 +5,11 @@ function submitPhase1() {
   const birthDateInput = document.getElementById("birth-date");
 
   const first = firstInput.value.trim();
+  const last = lastInput.value.trim();
   const email = emailInput.value.trim();
   const birthDate = birthDateInput.value.trim();
   let isValid = true;
+
   // Validate name
   if (!validateName(first)) {
     isValid = false;
@@ -22,7 +24,6 @@ function submitPhase1() {
   } else {
     lastInput.classList.remove("invalid");
   }
-  
 
   // Validate email
   if (!validateEmail(email)) {
@@ -43,7 +44,7 @@ function submitPhase1() {
   console.log(`isValid is ${isValid}`)
   if (isValid) {
     const user = new User();
-    user.updatePhase1(name, email, birthDate);
+    user.updatePhase1(`${first} ${last}`, email, birthDate);
 
     localStorage.setItem("user", JSON.stringify(user));
 
