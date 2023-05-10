@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Phase 3</title>
+</head>
+<body>
+  <div class="top-bar">
+    <h1>User Entry Wizard - Please enter your information</h1>
+  </div>
+  <div class="input-section">
+    <form action="">
+        <div class="input-row">
+            <label for="image-box" class="input-label">Image URL: </label>
+            <input type="url" name="image-box" id="image-box" class="text-box" required>
+        </div>
+        <div class="input-row">
+            <label for="hobbies-box" class="input-label">Hobbies (separated by commas): </label>
+            <input type="text" name="hobbies-box" id="hobbies-box" class="text-box">
+        </div>
+    </form>
+    <div class = "navigation-buttons">
+      <button onclick="navigateBack(2)">< Back</button>
+      <button onclick="navigateForward(1)">Next ></button>
+    </div>
+  </div>
+</body>
+</html>
