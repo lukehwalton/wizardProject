@@ -5,6 +5,15 @@ body {
     padding: 20px;
     text-align: center;
 }
+.top-bar {
+    height: 40px;
+    background: radial-gradient(
+      ellipse closest-corner,
+      blue 50%,
+      lightblue);
+    border-radius: 5px;
+    text-align: center;
+}
 
 .profile-container {
     position: relative;
