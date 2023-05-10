@@ -25,4 +25,3 @@ function submitPhase3() {
       window.location.href = "phase3Page.html";
     }
   }
-  
