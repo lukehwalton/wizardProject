@@ -12,17 +12,23 @@
     <h1>User Entry Wizard - Please enter your information</h1>
   </div>
   <div class="input-section">
-    <div>
-      <label for="city-box" class="input-label">City</label>
-      <input type="text" name="city-box" id="city-box" class="text-box" required>
-    </div>
-    <div>
-      <label for="street-box" class="input-label">Street</label>
-      <input type="text" name="street-box" id="street-box" class="text-box" required>
-    </div>
-    <div>
-      <label for="number-box" class="input-label">Number</label>
-      <input type="text" name="number-box" id="number-box" class="text-box" required>
+    <form action="">
+      <div class="input-row">
+        <label for="city-box" class="input-label">City:</label>
+        <input type="text" name="city-box" id="city-box" class="text-box" required>
+      </div>
+      <div class="input-row">
+        <label for="street-box" class="input-label">Street: </label>
+        <input type="text" name="street-box" id="street-box" class="text-box" required>
+      </div>
+      <div class="input-row">
+        <label for="number-box" class="input-label">Number: </label>
+        <input type="text" name="number-box" id="number-box" class="text-box" required>
+      </div>
+    </form>
+    <div class = "navigation-buttons">
+      <button onclick="navigateBack(2)">< Back</button>
+      <button onclick="navigateForward(1)">Next ></button>
     </div>
   </div>
 </body>

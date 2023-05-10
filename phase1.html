@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User Registration - Phase 1</title>
+    <title>Phase 1</title>
     <link rel="stylesheet" href="phase1Styles.css">
   </head>
   <body>
-    <h1>User Registration - Phase 1</h1>
+    <div class="top-bar">
+      <h1>User Entry Wizard - Please enter your information</h1>
+    </div>
     <form>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required minlength="5" pattern="[a-zA-Z]+ [a-zA-Z]+" placeholder="First Last"><br><br>
@@ -16,9 +18,13 @@
       <label for="birth-date">Birth Date:</label>
       <input type="text" id="birth-date" name="birth-date" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" placeholder="DD/MM/YY"><br><br>
 
-      <input type="submit" value="Next">
+      <div class = "navigation-buttons">
+        <button onclick="submit()">Next ></button>
+      </div>
+      <!-- <input type="submit" value="Next >"> -->
     </form>
     <script src="classes.js"></script>
     <script src="phase1.js"></script>
+    <script src="validate.js"></script>
   </body>
 </html>

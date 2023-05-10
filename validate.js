@@ -4,7 +4,7 @@ function validateName(name){
 }
 
 function validateEmail(email){
-  const emailExp = new RegExp('/[^\s@]+@[^\s@]+\.[^\s@]+/');
+  const emailExp = new RegExp(/[^\s@]+@[^\s@]+\.[^\s@]+/);
   return emailExp.test(email);
 }
 

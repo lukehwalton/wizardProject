@@ -1,3 +1,8 @@
+form {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
 .top-bar{
   height: 40px;
   background: radial-gradient(
@@ -12,11 +17,24 @@
   background: linear-gradient(gray, lightgray);
   padding-top: 20px;
   padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-content:center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+form{
+  padding: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .input-label{
@@ -26,3 +44,21 @@
 .text-box{
   width: 20ch;
 }
+
+input.invalid {
+  border-color: red;
+}
+
+/* input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+} */
