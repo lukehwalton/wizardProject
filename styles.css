@@ -13,19 +13,46 @@ form {
   text-align: center;
 }
 
-.input-section{
-  background: linear-gradient(gray, lightgray);
+.main-section{
+  background: linear-gradient(to top, gray, lightgray);
   padding-top: 20px;
   padding-bottom: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
+.inner-section{
+  display: flex;
+}
+
+img{
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+}
+
 form{
-  padding: 15px;
   text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.input-row{
+  margin-bottom: 20px;
+  display: block;
+}
+
+.input-label{
+  display: inline-block;
+  text-align: left;
+  width: 10ch;
+}
+
+.text-box{
+  display: inline-block;
+  width: 20ch;
 }
 
 input[type="text"],
@@ -35,10 +62,20 @@ input[type="email"] {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 20ch;
 }
 
 .input-label{
   margin-right: 10px;
+}
+
+.navigation-buttons{
+  text-align: center;
+}
+
+button{
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .text-box{
@@ -48,17 +85,3 @@ input[type="email"] {
 input.invalid {
   border-color: red;
 }
-
-/* input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #3e8e41;
-} */

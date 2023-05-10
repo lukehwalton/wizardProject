@@ -8,25 +8,32 @@
     <div class="top-bar">
       <h1>User Entry Wizard - Please enter your information</h1>
     </div>
-    <div class="input-section">
-      <form action="">
-        <label for="first">First name:</label>
-        <input type="text" id="first" name="first" required minlength="2" pattern="[a-zA-Z]+"><br><br>
-
-        <label for="last ">Last name:</label>
-        <input type="text" id="last" name="last" required minlength="2" pattern="[a-zA-Z]+"><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="you@example.com"><br><br>
-
-        <label for="birth-date">Birth Date:</label>
-        <input type="text" id="birth-date" name="birth-date" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" placeholder="DD/MM/YY"><br><br>
-      </form>
-      
+    <div class="main-section">
+      <div class="inner-section">
+        <img src="assets/person.png" alt="Clipart of a person">
+        <form action="">
+          <div class="input-row">
+            <label for="first">First name:</label>
+            <input type="text" id="first" name="first" required minlength="2" pattern="[a-zA-Z]+">
+          </div>
+          <div class="input-row">
+            <label for="last" class="input-label">Last name:</label>
+            <input type="text" id="last" name="last" required minlength="2" pattern="[a-zA-Z]+">
+          </div>
+          <div class="input-row">
+            <label for="email" class="input-label">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="you@example.com">
+          </div>
+          <div class="input-row">
+            <label for="birth-date" class="input-label">Birth Date:</label>
+            <input type="text" id="birth-date" name="birth-date" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" placeholder="DD/MM/YY">
+          </div>
+        </form>
+        <img src="assets/cake.jpg" alt="A carrot cake">
+      </div>
       <div class = "navigation-buttons">
         <button onclick="submitPhase1()">Next ></button>
       </div>
-
     </div>
     <script src="classes.js"></script>
     <script src="phase1.js"></script>
