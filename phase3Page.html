@@ -14,22 +14,33 @@
     <h1>User Entry Wizard - Please enter your information</h1>
   </div>
 
-  <div class="input-section">
-    <form action="">
-      <label for="image-box" class="input-label">Image URL: </label>
-      <input type="url" name="image-box" id="image-box" class="text-box" placeholder="https://example.com" 
-      pattern="https://.*" size="30" required><br><br>
-      
-      <label for="checkbox" class="input-label">Hobbies: </label>
-      <div class="checkbox-container">
-        <label><input type="checkbox" name="hobbies" value="Chess"> Chess</label>
-        <label><input type="checkbox" name="hobbies" value="Movies"> Movies</label>
-        <label><input type="checkbox" name="hobbies" value="Sport"> Sport</label>
-        <label><input type="checkbox" name="hobbies" value="Cars"> Cars</label>
-        <label><input type="checkbox" name="hobbies" value="Dolls"> Dolls</label>
-      </div><br><br>
-      </div>
-    </form>
+  <div class="main-section">
+    <div class="inner-section">
+      <!-- image goes here -->
+      <form action="">
+        <div class="input-row">
+          <label for="image-box" class="input-label">Image URL: </label>
+          <input type="url" name="image-box" id="image-box" class="text-box" placeholder="https://example.com" 
+          pattern="https://.*" size="30" required>
+        </div>
+        <div class="input-row">
+          <label for="checkbox" class="input-label">Hobbies: </label>
+          <div class="checkbox-container" id="checkbox" class="text-box">
+            <input type="checkbox" name="hobbies" id="chess" value="Chess">
+            <label for="chess">Chess</label><br>
+            <input type="checkbox" name="hobbies" id="movies" value="Movies">
+            <label for="movies">Movies</label><br>
+            <input type="checkbox" name="hobbies" id="sport" value="Sport">
+            <label for="sport">Sport</label><br>
+            <input type="checkbox" name="hobbies" id="cars" value="Cars">
+            <label for="cars"> Cars</label><br>
+            <input type="checkbox" name="hobbies" id="dolls" value="Dolls">
+            <label for="dolls">Dolls</label>
+          </div>
+        </div>
+      </form>
+      <!-- image goes here -->
+    </div>
     <div class = "navigation-buttons">
       <button onclick="navigateBack(2)">< Back</button>
       <button onclick="navigateForward(1)">Next ></button>
