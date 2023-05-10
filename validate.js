@@ -4,9 +4,10 @@ function validateName(name){
 }
 
 function validateEmail(email){
-  const emailExp = new RegExp(/[^\s@]+@[^\s@]+\.[^\s@]+/);
+  const emailExp = /[^\s@]+@[^\s@]+\.[^\s@]+/;
   return emailExp.test(email);
 }
+
 
 function validateBirthDate(birthDate){
   const birthExp = new RegExp('(([0-2][0-9])|(3[01]))\/((0[0-9])|(1[12]))\/[0-9]{2}$');
