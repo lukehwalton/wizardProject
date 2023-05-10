@@ -4,7 +4,7 @@ form {
 }
 
 .top-bar{
-  height: 40px;
+  height: fit-content;
   background: radial-gradient(
     ellipse closest-corner,
     blue 50%,

@@ -2,27 +2,32 @@
 <html>
   <head>
     <title>Phase 1</title>
-    <link rel="stylesheet" href="phase1Styles.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="top-bar">
       <h1>User Entry Wizard - Please enter your information</h1>
     </div>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required minlength="5" pattern="[a-zA-Z]+ [a-zA-Z]+" placeholder="First Last"><br><br>
+    <div class="input-section">
+      <form action="">
+        <label for="first">First name:</label>
+        <input type="text" id="first" name="first" required minlength="2" pattern="[a-zA-Z]+"><br><br>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required placeholder="you@example.com"><br><br>
+        <label for="last ">Last name:</label>
+        <input type="text" id="last" name="last" required minlength="2" pattern="[a-zA-Z]+"><br><br>
 
-      <label for="birth-date">Birth Date:</label>
-      <input type="text" id="birth-date" name="birth-date" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" placeholder="DD/MM/YY"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" placeholder="you@example.com"><br><br>
 
+        <label for="birth-date">Birth Date:</label>
+        <input type="text" id="birth-date" name="birth-date" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" placeholder="DD/MM/YY"><br><br>
+      </form>
+      
       <div class = "navigation-buttons">
-        <button onclick="submit()">Next ></button>
+        <button onclick="submitPhase1()">Next ></button>
       </div>
-      <!-- <input type="submit" value="Next >"> -->
-    </form>
+
+    </div>
     <script src="classes.js"></script>
     <script src="phase1.js"></script>
     <script src="validate.js"></script>

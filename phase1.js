@@ -1,21 +1,28 @@
-function submit() {
-  const nameInput = document.getElementById("name");
+function submitPhase1() {
+  const firstInput = document.getElementById("first");
+  const lastInput = document.getElementById("last")
   const emailInput = document.getElementById("email");
   const birthDateInput = document.getElementById("birth-date");
 
-  const name = nameInput.value.trim();
+  const first = firstInput.value.trim();
   const email = emailInput.value.trim();
   const birthDate = birthDateInput.value.trim();
-
   let isValid = true;
-
   // Validate name
-  if (!validateName(name)) {
+  if (!validateName(first)) {
     isValid = false;
-    nameInput.classList.add("invalid");
+    firstInput.classList.add("invalid");
   } else {
-    nameInput.classList.remove("invalid");
+    firstInput.classList.remove("invalid");
   }
+
+  if (!validateName(last)) {
+    isValid = false;
+    lastInput.classList.add("invalid");
+  } else {
+    lastInput.classList.remove("invalid");
+  }
+  
 
   // Validate email
   if (!validateEmail(email)) {
@@ -33,13 +40,14 @@ function submit() {
     birthDateInput.classList.remove("invalid");
   }
 
+  console.log(`isValid is ${isValid}`)
   if (isValid) {
     const user = new User();
     user.updatePhase1(name, email, birthDate);
 
     localStorage.setItem("user", JSON.stringify(user));
 
-    // Redirect to phase 2 page
+    //Redirect to phase 2 page
     window.location.href = "phase2.html";
   }
 }
