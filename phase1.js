@@ -1,8 +1,4 @@
-const form = document.querySelector("form");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
+function submit() {
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const birthDateInput = document.getElementById("birth-date");
@@ -46,4 +42,4 @@ form.addEventListener("submit", (event) => {
     // Redirect to phase 2 page
     window.location.href = "phase2.html";
   }
-});
+}
