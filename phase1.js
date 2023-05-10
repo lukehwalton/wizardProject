@@ -14,8 +14,7 @@ form.addEventListener("submit", (event) => {
   let isValid = true;
 
   // Validate name
-  const nameRegex = /^[a-zA-Z]{2,}\s[a-zA-Z]{2,}$/;
-  if (!nameRegex.test(name)) {
+  if (!validateName(name)) {
     isValid = false;
     nameInput.classList.add("invalid");
   } else {
@@ -23,8 +22,7 @@ form.addEventListener("submit", (event) => {
   }
 
   // Validate email
-  const emailRegex = /\S+@\S+\.\S+/;
-  if (!emailRegex.test(email)) {
+  if (!validateEmail(email)) {
     isValid = false;
     emailInput.classList.add("invalid");
   } else {
@@ -32,8 +30,7 @@ form.addEventListener("submit", (event) => {
   }
 
   // Validate birth date
-  const birthDateRegex = /^[0-9]{2}\/[0-9]{2}\/[0-9]{2}$/;
-  if (!birthDateRegex.test(birthDate)) {
+  if (!validateBirthDate(birthDate)) {
     isValid = false;
     birthDateInput.classList.add("invalid");
   } else {
@@ -43,7 +40,6 @@ form.addEventListener("submit", (event) => {
   if (isValid) {
     const user = new User();
     user.updatePhase1(name, email, birthDate);
-
 
     localStorage.setItem("user", JSON.stringify(user));
 
