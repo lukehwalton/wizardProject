@@ -42,10 +42,8 @@ function submitPhase2(){
   }
 
   if (isValid) {
-    const oldUser = JSON.parse(localStorage.getItem("user"));
-    const user = new User(oldUser.name, oldUser.email, oldUser.birthDate);
+    const user = new User(storedUser.name, storedUser.email, storedUser.birthDate);
     user.updatePhase2(city, street, houseNumber);
-    console.log(user);
 
     localStorage.setItem("user", JSON.stringify(user));
     
@@ -54,6 +52,5 @@ function submitPhase2(){
   }
 };
 
-function navigateBack() {
-  window.location.href = "phase1.html";
-};
+const storedUser = onLoad(2);
+console.log(storedUser);
