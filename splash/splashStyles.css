@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Splash Screen</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
 body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -30,7 +24,7 @@ body {
   display: flex;
 
   /* Then we define the flow direction 
-       and if we allow the items to wrap 
+     * and if we allow the items to wrap 
      * Remember this is the same as:
      * flex-direction: row;
      * flex-wrap: wrap;
@@ -127,19 +121,3 @@ h1 {
 .start-button:hover {
   background-color: dodgerblue;
 }
-
-  </style>
-</head>
-<body>
-  <div class="splash-container">
-    <h1 class="splash-title">Welcome to User Entry Wizard</h1>
-    <button class="start-button" onclick="startWizard()">Start</button>
-  </div>
-  <script>
-    function startWizard() {
-      localStorage.setItem("splashShown", "true");
-      window.location.href = "phase1.html";
-    }
-  </script>
-</body>
-</html>

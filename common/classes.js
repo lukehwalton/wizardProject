@@ -1,6 +1,7 @@
 class User {
-  constructor(name = "", email = "", birthDate = "", city = "", street = "", number = null, image = "", hobbies = []) {
-    this.name = name;
+  constructor(first = "", last = "", email = "", birthDate = "", city = "", street = "", number = null, image = "", hobbies = []) {
+    this.first = first;
+    this.last = last;
     this.email = email;
     this.birthDate = birthDate;
     this.city = city;
@@ -11,28 +12,9 @@ class User {
     this.currentPhase = 1;
   }
 
-  get formattedBirthDate() {
-    return this.birthDate;
-  }
-
-  get address() {
-    let address = this.street;
-    if (this.number) {
-      address += ` ${this.number}`;
-    }
-    address += `, ${this.city}`;
-    return address;
-  }
-
-  get hobbiesList() {
-    if (this.hobbies === []) {
-      return false;
-    }
-    return hobbies.join(", ");
-  }
-
-  updatePhase1(name, email, birthDate) {
-    this.name = name.trim();
+  updatePhase1(first, last, email, birthDate) {
+    this.first = first.trim();
+    this.last = last.trim();
     this.email = email.trim();
     this.birthDate = birthDate.trim();
     this.currentPhase = 2;

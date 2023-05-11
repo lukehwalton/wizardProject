@@ -3,10 +3,6 @@ function goBack(){
 }
 
 function submitPhase2(){
-  const cityInput = document.getElementById("city-box");
-  const streetInput = document.getElementById("street-box");
-  const numberInput = document.getElementById("number-box");
-
   const city = cityInput.value.trim();
   const street = streetInput.value.trim();
   const houseNumber = numberInput.value.trim();
@@ -42,15 +38,28 @@ function submitPhase2(){
   }
 
   if (isValid) {
-    const user = new User(storedUser.name, storedUser.email, storedUser.birthDate);
+    const user = parseUser(storedUser);
     user.updatePhase2(city, street, houseNumber);
 
     localStorage.setItem("user", JSON.stringify(user));
     
     //go to next page
-    window.location.href = "phase3.html";
+    window.location.href = "../phase3/phase3.html";
   }
 };
 
 const storedUser = onLoad(2);
-console.log(storedUser);
+const cityInput = document.getElementById("city-box");
+const streetInput = document.getElementById("street-box");
+const numberInput = document.getElementById("number-box");
+if(storedUser){
+  if(storedUser.city){
+    cityInput.value = storedUser.city;
+  }
+  if(storedUser.street){
+    streetInput.value = storedUser.street;
+  }
+  if(storedUser.number){
+    numberInput.value = storedUser.number;
+  }
+}
