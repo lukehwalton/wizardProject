@@ -34,6 +34,6 @@ function submitPhase3() {
     localStorage.setItem("user", JSON.stringify(user));
 
     //Move on to summary page
-    window.location.href = "phase4Page.html";
+    window.location.href = "phase4.html";
   }
 }
