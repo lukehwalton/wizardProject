@@ -1,5 +1,5 @@
 function goBack(){
-  window.location.href = "phase2.html"
+  window.location.href = "phase1.html";
 }
 
 function submitPhase2(){
@@ -42,9 +42,10 @@ function submitPhase2(){
   }
 
   if (isValid) {
-    const oldUser = localStorage.getItem("user");
+    const oldUser = JSON.parse(localStorage.getItem("user"));
     const user = new User(oldUser.name, oldUser.email, oldUser.birthDate);
     user.updatePhase2(city, street, houseNumber);
+    console.log(user);
 
     localStorage.setItem("user", JSON.stringify(user));
     

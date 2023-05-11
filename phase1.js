@@ -44,7 +44,7 @@ function submitPhase1() {
   if (isValid) {
     const user = new User();
     user.updatePhase1(`${first} ${last}`, email, birthDate);
-
+    
     localStorage.setItem("user", JSON.stringify(user));
 
     //Redirect to phase 2 page
