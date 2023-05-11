@@ -33,8 +33,10 @@ function navigateBack() {
 };
 
 function reset() {
+    splashShown = localStorage.getItem("splashShown");
     localStorage.clear();
-    window.location.href = "phase1.html";
+    if (splashShown) window.location.href = "phase1.html";
+    else window.location.href = "splash.html";
 };
 
 const user = getUserFromLocalStorage();

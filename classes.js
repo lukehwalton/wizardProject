@@ -35,9 +35,13 @@ class User {
       return hobbies.join(", ");
     }
     
-    get currentPhase(){
-        return this.currentPhase;
-    }
+    // get currentPhase(){
+    //     return this.currentPhase;
+    // }
+
+    // set currentPhase(phase){
+    //   this.currentPhase = phase;
+    // }
     
     updatePhase1(name, email, birthDate) {
       this.name = name.trim();
