@@ -7,6 +7,7 @@ function goBack(){
 function submitPhase3() {
   const imageInput = document.getElementById("image-box");
   const hobbyBoxes = document.getElementsByName('hobbies');
+  
   const imageURL = imageInput.value.trim();
   const hobbies = [];
   let isValid = true;

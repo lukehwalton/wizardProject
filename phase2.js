@@ -51,4 +51,8 @@ function submitPhase2(){
     //go to next page
     //window.location.href = "phase3Page.html";
   }
-}
+};
+
+function navigateBack() {
+  window.location.href = "phase1.html";
+};
