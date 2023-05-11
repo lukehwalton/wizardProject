@@ -38,5 +38,10 @@
     <script src="classes.js"></script>
     <script src="phase1.js"></script>
     <script src="validate.js"></script>
+    <script>
+      if (!localStorage.getItem("splashShown")) {
+        window.location.href = "splash.html";
+      }
+    </script>
   </body>
 </html>

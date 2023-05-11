@@ -32,4 +32,21 @@ function submitPhase3() {
       imageInput.classList.add("invalid");
     }
   });
+
+  //get a list of hobbies from the checkbox
+  for (var i= 0; i < hobbyBoxes.length; i++){
+    if (hobbyBoxes[i].checked) hobbies.push(hobbyBoxes[i].value);
+  }
+
+  console.log(`isValid is ${isValid}`)
+  if (isValid) {
+    const oldUser = localStorage.getItem("user");
+    const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.houseNumber);
+    user.updatePhase3(imageURL, hobbies.join(","));
+
+    localStorage.setItem("user", JSON.stringify(user));
+
+    //Move on to summary page
+    window.location.href = "phase4.html";
+  }
 }

@@ -29,7 +29,7 @@ function setUserProfile(user) {
 };
 
 function navigateBack() {
-    window.location.href = "phase3Page.html";
+    window.location.href = "phase3.html";
 };
 
 function reset() {

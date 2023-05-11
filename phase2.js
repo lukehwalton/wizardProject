@@ -50,7 +50,7 @@ function submitPhase2(){
     localStorage.setItem("user", JSON.stringify(user));
     
     //go to next page
-    window.location.href = "phase3Page.html";
+    window.location.href = "phase3.html";
   }
 };
 
