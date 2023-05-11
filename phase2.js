@@ -1,5 +1,5 @@
 function goBack(){
-  window.location.href = "phase2.html"
+  window.location.href = "phase1.html";
 }
 
 function submitPhase2(){
@@ -44,11 +44,11 @@ function submitPhase2(){
   if (isValid) {
     const oldUser = localStorage.getItem("user");
     const user = new User(oldUser.name, oldUser.email, oldUser.birthDate);
-    user.updatePhase2(city, street, number);
-
-    localStorage.setItem("user", JSON.stringify(user));
+    user.updatePhase2(city, street, houseNumber);
+    //console.log(user);
+    //localStorage.setItem("user", JSON.stringify(user));
     
     //go to next page
-    window.location.href = "phase3Page.html";
+    //window.location.href = "phase3Page.html";
   }
 }

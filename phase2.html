@@ -25,15 +25,18 @@
         </div>
         <div class="input-row">
           <label for="number-box" class="input-label">Number: </label>
-          <input type="text" name="number-box" id="number-box" class="text-box" required>
+          <input type="text" name="number-box" id="number-box" class="text-box">
         </div>
       </form>
       <img src="assets/door.jpg" alt="A wooden door with windows and a pair of wrought iron chairs on the patio outside">
     </div>
     <div class = "navigation-buttons">
-      <button onclick="navigateBack(2)">< Back</button>
-      <button onclick="navigateForward(1)">Next ></button>
+      <button onclick="goBack()">< Back</button>
+      <button onclick="submitPhase2()">Next ></button>
     </div>
   </div>
+  <script src="classes.js"></script>
+  <script src="phase2.js"></script>
+  <script src="validate.js"></script>
 </body>
 </html>

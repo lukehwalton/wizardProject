@@ -1,3 +1,5 @@
+console.log(localStorage.getItem("user"));
+
 function goBack(){
   window.location.href = "phase2.html"
 }
@@ -24,15 +26,15 @@ function submitPhase3() {
     if (hobbyBoxes[i].checked) hobbies.push(hobbyBoxes[i].value);
   }
 
-  console.log(`isValid is ${isValid}`)
   if (isValid) {
     const oldUser = localStorage.getItem("user");
+    console.log(oldUser);
     const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.number);
     user.updatePhase3(image, hobbies.join(","));
 
     localStorage.setItem("user", JSON.stringify(user));
 
     //Move on to summary page
-    window.location.href = "phase4Page.html";
+    //window.location.href = "phase4Page.html";
   }
 }
