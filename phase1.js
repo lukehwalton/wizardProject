@@ -41,7 +41,6 @@ function submitPhase1() {
     birthDateInput.classList.remove("invalid");
   }
 
-  console.log(`isValid is ${isValid}`)
   if (isValid) {
     const user = new User();
     user.updatePhase1(`${first} ${last}`, email, birthDate);
