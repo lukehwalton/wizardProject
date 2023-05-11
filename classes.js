@@ -34,7 +34,11 @@ class User {
       }
       return this.hobbies.split(",").map((hobby) => hobby.trim()).join(", ");
     }
-  
+    
+    get currentPhase(){
+        return this.currentPhase;
+    }
+    
     updatePhase1(name, email, birthDate) {
       this.name = name.trim();
       this.email = email.trim();
