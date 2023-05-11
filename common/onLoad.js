@@ -16,7 +16,7 @@ function checkPhase(usrPhase, page){
 
   else if (usrPhase < page){
     console.log(`${usrPhase} is less than ${page}`)
-    window.location.href = `phase${usrPhase}.html`;
+    window.location.href = `../phase${usrPhase}/phase${usrPhase}.html`;
   }
 }
 

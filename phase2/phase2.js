@@ -1,5 +1,5 @@
 function goBack(){
-  window.location.href = "phase1.html";
+  window.location.href = "../phase1/phase1.html";
 }
 
 function submitPhase2(){
