@@ -1,8 +1,3 @@
-function getUserFromLocalStorage() {
-    const storedUser = localStorage.getItem('user');
-    return storedUser ? JSON.parse(storedUser) : null;
-};
-
 function setUserProfile(user) {
     if (!user) return;
 
@@ -39,5 +34,5 @@ function reset() {
     else window.location.href = "splash.html";
 };
 
-const user = getUserFromLocalStorage();
-setUserProfile(user);
+const storedUser = onLoad(4);
+setUserProfile(storedUser);

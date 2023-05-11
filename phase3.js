@@ -19,8 +19,7 @@ function submitPhase3() {
   // Validate image url
   validateImageURL(imageURL, function(imgValid){
     if (imgValid){
-      const oldUser = JSON.parse(localStorage.getItem("user"));
-      const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.number);
+      const user = new User(storedUser.name, storedUser.email, storedUser.birthDate, storedUser.city, storedUser.street, storedUser.number);
       user.updatePhase3(imageURL, hobbies);
       console.log(user);
       localStorage.setItem("user", JSON.stringify(user));
@@ -38,3 +37,5 @@ function submitPhase3() {
     if (hobbyBoxes[i].checked) hobbies.push(hobbyBoxes[i].value);
   }
 }
+
+const storedUser = onLoad(3);

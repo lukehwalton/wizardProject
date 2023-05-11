@@ -51,3 +51,5 @@ function submitPhase1() {
     window.location.href = "phase2.html";
   }
 }
+
+onLoad(1);
