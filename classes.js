@@ -24,13 +24,6 @@ class User {
     return address;
   }
 
-  get hobbiesList() {
-    if (this.hobbies === []) {
-      return false;
-    }
-    return hobbies.join(", ");
-  }
-
   updatePhase1(name, email, birthDate) {
     this.name = name.trim();
     this.email = email.trim();

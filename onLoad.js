@@ -8,24 +8,22 @@ function checkPhase(curPhase, page){
     window.location.href = "splash.html";
     return;
   }
-  else if (page === 1){
-    return;
-  }
+
   else if(!curPhase){
     window.location.href = "phase1.html";
     return;
   }
-  else if (curPhase === 1){
-    window.location.href = "phase1.html";
-    return;
-  }
+
   else if (curPhase < page){
     console.log(`${curPhase} is less than ${page}`)
-    window.location.href = `phase${curPhase - 1}.html`;
+    window.location.href = `phase${curPhase}.html`;
   }
 }
 
 function onLoad(page){
+  if (!localStorage.getItem("splashShown")) {
+    window.location.href = "splash.html";
+  }
   const user = getUser();
   console.log(user);
   const curPhase = user.currentPhase;

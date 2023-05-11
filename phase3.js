@@ -3,9 +3,6 @@ function goBack(){
 }
 
 function submitPhase3() {
-  const imageInput = document.getElementById("image-box");
-  const hobbyBoxes = document.getElementsByName('hobbies');
-  
   const imageURL = imageInput.value.trim();
   const hobbies = [];
 
@@ -31,11 +28,11 @@ function submitPhase3() {
       imageInput.classList.add("invalid");
     }
   });
-
-  //get a list of hobbies from the checkbox
-  for (var i= 0; i < hobbyBoxes.length; i++){
-    if (hobbyBoxes[i].checked) hobbies.push(hobbyBoxes[i].value);
-  }
 }
 
 const storedUser = onLoad(3);
+const imageInput = document.getElementById("image-box");
+const hobbyBoxes = document.getElementsByName('hobbies');
+if(storedUser.image){
+  imageInput.value = storedUser.image;
+}

@@ -3,6 +3,15 @@
   <head>
     <title>Phase 1</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
   </head>
   <body>
     <div class="top-bar">
@@ -26,7 +35,7 @@
           </div>
           <div class="input-row">
             <label for="birth-date" class="input-label">Birth Date:</label>
-            <input type="text" id="birth-date" name="birth-date" class="text-box" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" placeholder="DD/MM/YY">
+            <input type="text" id="datepicker" name="birth-date" class="text-box" required pattern="\d{2}-\d{2}-\d{2}" / placeholder="dd/mm/yy">
           </div>
         </form>
         <img src="assets/cake.jpg" alt="A carrot cake">

@@ -1,9 +1,4 @@
 function submitPhase1() {
-  const firstInput = document.getElementById("first");
-  const lastInput = document.getElementById("last")
-  const emailInput = document.getElementById("email");
-  const birthDateInput = document.getElementById("birth-date");
-
   const first = firstInput.value.trim();
   const last = lastInput.value.trim();
   const email = emailInput.value.trim();
@@ -53,3 +48,7 @@ function submitPhase1() {
 }
 
 onLoad(1);
+const firstInput = document.getElementById("first");
+const lastInput = document.getElementById("last");
+const emailInput = document.getElementById("email");
+const birthDateInput = document.getElementById("datepicker");
