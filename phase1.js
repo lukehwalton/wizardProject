@@ -1,3 +1,4 @@
+console.log(localStorage.getItem("user"));
 function submitPhase1() {
   const firstInput = document.getElementById("first");
   const lastInput = document.getElementById("last")

@@ -1,5 +1,3 @@
-console.log(localStorage.getItem("user"));
-
 function goBack(){
   window.location.href = "phase2.html"
 }
@@ -10,32 +8,28 @@ function submitPhase3() {
   
   const imageURL = imageInput.value.trim();
   const hobbies = [];
-  let isValid = true;
-
-  // Validate image url
-  validateImageURL(imageURL, function(imgValid){
-    if (!imgValid){
-      isValid = false;
-      imageInput.classList.add("invalid");
-    } else {
-      imageInput.classList.remove('invalid')
-    }
-  });
 
   //get a list of hobbies from the checkbox
   for (var i= 0; i < hobbyBoxes.length; i++){
-    if (hobbyBoxes[i].checked) hobbies.push(hobbyBoxes[i].value);
+    if (hobbyBoxes[i].checked){
+      hobbies.push(hobbyBoxes[i].value);
+    }
   }
 
-  if (isValid) {
-    const oldUser = localStorage.getItem("user");
-    console.log(oldUser);
-    const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.number);
-    user.updatePhase3(image, hobbies.join(","));
+  // Validate image url
+  validateImageURL(imageURL, function(imgValid){
+    if (imgValid){
+      const oldUser = JSON.parse(localStorage.getItem("user"));
+      const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.number);
+      user.updatePhase3(imageURL, hobbies);
+      console.log(user);
+      localStorage.setItem("user", JSON.stringify(user));
+      imageInput.classList.remove('invalid')
 
-    localStorage.setItem("user", JSON.stringify(user));
-
-    //Move on to summary page
-    //window.location.href = "phase4Page.html";
-  }
+      //Move on to summary page
+      window.location.href = "phase4Page.html";
+    } else {
+      imageInput.classList.add("invalid");
+    }
+  });
 }

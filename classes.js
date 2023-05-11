@@ -1,5 +1,5 @@
 class User {
-    constructor(name = "", email = "", birthDate = "", city = "", street = "", number = null, image = "", hobbies = "") {
+    constructor(name = "", email = "", birthDate = "", city = "", street = "", number = null, image = "", hobbies = []) {
       this.name = name;
       this.email = email;
       this.birthDate = birthDate;
@@ -11,9 +11,9 @@ class User {
       this.currentPhase = 1;
     }
   
-    get fullName() {
-      return this.name;
-    }
+    // get name() {
+    //   return this.name;
+    // }
   
     get formattedBirthDate() {
       return this.birthDate;
@@ -29,10 +29,10 @@ class User {
     }
   
     get hobbiesList() {
-      if (this.hobbies === "") {
+      if (this.hobbies === []) {
         return false;
       }
-      return this.hobbies.split(",").map((hobby) => hobby.trim()).join(", ");
+      return hobbies.join(", ");
     }
   
     updatePhase1(name, email, birthDate) {
@@ -51,7 +51,7 @@ class User {
   
     updatePhase3(image, hobbies) {
       this.image = image.trim();
-      this.hobbies = hobbies === "" ? "" : hobbies.trim();
+      this.hobbies = hobbies.length > 0 ? hobbies : [];
     }
   }
   
