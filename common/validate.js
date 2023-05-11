@@ -8,12 +8,6 @@ function validateEmail(email){
   return emailExp.test(email);
 }
 
-
-function validateBirthDate(birthDate){
-  const birthExp = new RegExp('(([0-2][0-9])|(3[01]))\/((0[0-9])|(1[12]))\/[0-9]{2}$');
-  return birthExp.test(birthDate);
-}
-
 function validateNumber(number){ //Note that number is expected to be a string
   if (Number(number) < 1) return false;
   const numberExp = new RegExp('^[0-9]+$');

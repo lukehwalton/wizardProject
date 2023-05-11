@@ -1,0 +1,25 @@
+.url-text-box {
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .checkbox-container {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 55%;
+  }
+  
+  .input-label.hobbies-label {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
