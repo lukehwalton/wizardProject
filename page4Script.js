@@ -1,7 +1,7 @@
 function getUserFromLocalStorage() {
     const storedUser = localStorage.getItem('user');
     return storedUser ? JSON.parse(storedUser) : null;
-}
+};
 
 function setUserProfile(user) {
     if (!user) return;
@@ -19,7 +19,16 @@ function setUserProfile(user) {
         listItem.textContent = hobby;
         hobbiesList.appendChild(listItem);
     });
-}
+};
+
+function navigateBack() {
+    window.location.href = "phase3Page.html";
+};
+
+function reset() {
+    localStorage.clear();
+    window.location.href = "phase1.html";
+};
 
 const user = getUserFromLocalStorage();
 setUserProfile(user);
