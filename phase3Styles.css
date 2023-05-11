@@ -15,11 +15,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-left: 20px;
-  }
-  
-  .checkbox-input {
-    display: block;
-    margin-bottom: 5px;
+    width: 55%;
   }
   
   .input-label.hobbies-label {
