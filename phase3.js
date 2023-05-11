@@ -5,6 +5,7 @@ function goBack(){
 function submitPhase3() {
   const imageInput = document.getElementById("image-box");
   const hobbyBoxes = document.getElementsByName('hobbies');
+  
   const imageURL = imageInput.value.trim();
   const hobbies = [];
   let isValid = true;
@@ -27,8 +28,8 @@ function submitPhase3() {
   console.log(`isValid is ${isValid}`)
   if (isValid) {
     const oldUser = localStorage.getItem("user");
-    const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.number);
-    user.updatePhase3(image, hobbies.join(","));
+    const user = new User(oldUser.name, oldUser.email, oldUser.birthDate, oldUser.city, oldUser.street, oldUser.houseNumber);
+    user.updatePhase3(imageURL, hobbies.join(","));
 
     localStorage.setItem("user", JSON.stringify(user));
 
